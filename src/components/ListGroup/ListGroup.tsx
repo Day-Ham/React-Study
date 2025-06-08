@@ -7,6 +7,15 @@ const List = styled.ul`
   padding: 0;
 `;
 
+interface ListItemProps {
+  active: boolean;
+}
+
+const ListItem = styled.li<ListItemProps>`
+  padding: 10px 5px;
+  background: ${(props) => (props.active ? "blue" : "none")};
+`;
+
 interface Props {
   items: string[];
   title: string;
@@ -14,7 +23,7 @@ interface Props {
 }
 
 function ListGroup({ items, title, onSelectItem }: Props) {
-  const [selectedIndex, setSelectedIndex] = useState(2);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
     <>
@@ -22,7 +31,8 @@ function ListGroup({ items, title, onSelectItem }: Props) {
       {items.length === 0 && <p>No Item Found</p>}
       <List>
         {items.map((item, index) => (
-          <li
+          <ListItem
+            active={index == selectedIndex}
             className={
               selectedIndex === index
                 ? "list-group-item active"
@@ -35,7 +45,7 @@ function ListGroup({ items, title, onSelectItem }: Props) {
             }}
           >
             {item}
-          </li>
+          </ListItem>
         ))}
       </List>
     </>
