@@ -1,0 +1,10 @@
+{alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>
+      )}
+      <Button
+        onClick={() => {
+          setAlertVisibility(true);
+        }}
+      >
+        Clickster
+      </Button>
