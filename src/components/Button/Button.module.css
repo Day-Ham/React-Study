@@ -1,0 +1,11 @@
+.btn{
+    font-size: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    border:0;
+
+}
+
+.btn-primary{
+    background-color: blueviolet;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Message from "./Message";
 import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import ListGroup from "./components/ListGroup";
 
 function App() {
@@ -22,13 +22,16 @@ function App() {
   };
 
   return (
-    <div>
-      <ListGroup
-        items={items}
-        title="Citites"
-        onSelectItem={handleSelectItem}
-      ></ListGroup>
-    </div>
+    <>
+      <Button onClick={() => console.log("Test")}>Test</Button>
+      <div>
+        <ListGroup
+          items={items}
+          title="Citites"
+          onSelectItem={handleSelectItem}
+        ></ListGroup>
+      </div>
+    </>
   );
 }
 
