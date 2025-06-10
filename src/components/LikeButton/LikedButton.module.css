@@ -1,0 +1,13 @@
+.btn{
+     font-size: 50px;
+     color:red;
+}
+
+.on{
+     font-size: 50px;
+     color:rgb(255, 78, 78);
+}
+.off{
+     font-size: 50px;
+     color:black;
+}

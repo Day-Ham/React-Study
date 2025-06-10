@@ -3,9 +3,10 @@ import Message from "./Message";
 import Alert from "./components/Alert";
 import Button from "./components/Button/Button";
 import ListGroup from "./components/ListGroup";
-
+import LikeButton from "./components/LikeButton/LikeButton";
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
+  const [likeIndicator, setLike] = useState(false);
 
   let items = [
     "Busan",
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Button onClick={() => console.log("Test")}>Test</Button>
+      <LikeButton />
       <div>
         <ListGroup
           items={items}
